@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "714163308910",
+    "firebase_url": "https://blm-transportation-tracker.firebaseio.com",
+    "project_id": "blm-transportation-tracker",
+    "storage_bucket": "blm-transportation-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714163308910:android:b2087ebfa540ebac3ad97f",
+        "android_client_info": {
+          "package_name": "com.example.transporttracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714163308910-rfqtk9l2lfj8o22j4jva10nv09p8ohjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.transporttracker",
+            "certificate_hash": "31efd232ae5b7cf6a405abf71fe6525b5204fea5"
+          }
+        },
+        {
+          "client_id": "714163308910-htsqmp256o2q2rs2dc1abivo9etk25lf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1TV3wuv2fXdkM5zyXuQxfTcFs2qC4fII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714163308910-htsqmp256o2q2rs2dc1abivo9etk25lf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714163308910:android:b9ca43512b4d2b623ad97f",
+        "android_client_info": {
+          "package_name": "com.huntersolutions.flcandroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714163308910-90aut047r72tfov4ar37kn3821kcf6ki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.huntersolutions.flcandroidapp",
+            "certificate_hash": "bd1934f29c1146896431eb92a608a278468d293b"
+          }
+        },
+        {
+          "client_id": "714163308910-htsqmp256o2q2rs2dc1abivo9etk25lf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1TV3wuv2fXdkM5zyXuQxfTcFs2qC4fII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714163308910-htsqmp256o2q2rs2dc1abivo9etk25lf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
