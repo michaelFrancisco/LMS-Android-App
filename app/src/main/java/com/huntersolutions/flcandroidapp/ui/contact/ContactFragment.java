@@ -7,21 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.huntersolutions.flcandroidapp.R;
 
 
 public class ContactFragment extends Fragment {
 
-    private ContactViewModel contactViewModel;
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootview = inflater.inflate(R.layout.fragment_contact, container, false);
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        contactViewModel =
-                ViewModelProviders.of(this).get(ContactViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_contact, container, false);
-
-        return root;
+        return rootview;
     }
 }

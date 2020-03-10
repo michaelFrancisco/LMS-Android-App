@@ -27,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
     private String email;
     private FirebaseDatabase database;
 
-
     @Override
     public void onStart() {
         super.onStart();
@@ -43,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
+
 
         Button btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -61,13 +61,10 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Button btnLogin = findViewById(R.id.btnLogin);
-                            btnLogin.setEnabled(false);
                             Toast.makeText(LoginActivity.this, "Authentication Success ",
                                     Toast.LENGTH_SHORT).show();
-                            TruckInformation truckInformation = new TruckInformation();
-                            truckInformation.setTruckName(email);
-                            truckInformation.setEmail(email);
+                            TruckInformation.setTruckName(email);
+                            TruckInformation.setEmail(email);
                             Intent goToMainActivity = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(goToMainActivity);
                         }
