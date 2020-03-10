@@ -12,7 +12,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,12 +24,15 @@ import com.google.firebase.database.ValueEventListener;
 import com.huntersolutions.flcandroidapp.R;
 import com.huntersolutions.flcandroidapp.ui.TruckInformation;
 
+import java.util.Queue;
+
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
     private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
     private MapView mapView;
     private FirebaseDatabase database;
     private GoogleMap gmap;
+    private Marker mCurrLocationMarker;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
@@ -100,6 +106,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 LatLng currentLocation = new LatLng(dataSnapshot.child("latitude").getValue(Double.class), dataSnapshot.child("longitude").getValue(Double.class));
+                if (mCurrLocationMarker != null) {
+                    mCurrLocationMarker.remove();
+                }
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.position(currentLocation);
+                markerOptions.title("Current Position");
+                mCurrLocationMarker = gmap.addMarker(markerOptions);
                 gmap.moveCamera(CameraUpdateFactory.newLatLng(currentLocation));
             }
 
