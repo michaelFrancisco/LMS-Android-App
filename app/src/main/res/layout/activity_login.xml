@@ -7,7 +7,7 @@
     android:layout_centerInParent="false"
     android:layout_centerVertical="false"
     android:background="#00FFFFFF"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <LinearLayout
         android:layout_width="0dp"
